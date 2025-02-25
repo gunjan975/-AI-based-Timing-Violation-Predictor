@@ -1,17 +1,45 @@
-This project aims to develop an AI algorithm to predict the combinational logic 
-depth of signals in RTL designs for early identification of potential timing violations. 
+# RTL Logic Depth Prediction
+
+This project aims to develop an AI algorithm to predict the combinational logic depth of signals in RTL designs for early identification of potential timing violations.
 
 ## Project Structure
 
 - **data/:** Contains RTL design dataset (or scripts to generate it).
-- **src/:**  Source code for data preprocessing, model training, and evaluation.
-- **models/:**  Stores trained machine learning models. 
+  - `generate_data.py`: Script to generate placeholder RTL design data.
+- **src/:** Source code for data preprocessing, model training, and evaluation.
+  - `preprocess.py`: Preprocesses the RTL design data and extracts features.
+  - `model.py`: Builds, trains, and saves the neural network model.
+  - `evaluate.py`: Loads the trained model and evaluates its performance.
+- **models/:** Stores trained machine learning models.
+- **requirements.txt:** Lists the dependencies required for the project.
 
 ## Getting Started
 
-1. **Install dependencies:** `pip install -r requirements.txt`
-2. **Generate Data (optional):** `python data/generate_data.py`
-   -  **Important:** Replace the placeholder code with your own logic.
-3. **Preprocess Data:** `python src/preprocess.py`
-4. **Train the Model:** `python src/model.py`
-5. **Evaluate the Model:** `python src/evaluate.py`
+### Prerequisites
+
+Ensure you have Python installed on your system. You can download it from [python.org](https://www.python.org/).
+
+### Installation
+
+#. **Clone the repository:**
+   '''
+  > git clone https://github.com/gunjan975/-AI-based-Timing-Violation-Predictor.git
+  > cd -AI-based-Timing-Violation-Predictor
+   '''
+#. Install dependencies:
+   > pip install -r requirements.txt
+
+#.Data Generation
+   > python data/generate_data.py
+
+#.Data Preprocessing
+   > python src/preprocess.py
+
+#.Model Training
+   > python src/model.py
+
+#.Model Evaluation
+   > python src/evaluate.py
+
+#These dependencies are listed in the requirements.txt file.
+  > pip install -r requirements.txt 
